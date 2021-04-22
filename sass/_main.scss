@@ -1,7 +1,7 @@
 .wrapper {
     width: 100%;
     height: 100%;
-    display: flex;
+    // display: flex;
     .background {
         width: 100%;
         height: 60%;
@@ -11,13 +11,15 @@
         background-size: cover;
         background-position: center;
         @media (max-width: $md) {
-            width: 100%;
+            width: 90%;
             height: 40%;
+            margin-left: 5%;
             
         }
         @media (max-width: $sm) {
-            width: 100%;
+            width: 80%;
             height: 20%;
+            margin-left: 10%;
         }
         .box__introduce {
             width: 250px;
@@ -66,25 +68,24 @@
                 }
             }
         }
-        .button__wrap {
-            width: 180px;
-            height: 70px;
-            margin-left: calc(50% - 90px);
-            // margin-top: 160px;
-            // position: relative;
-            button {
-                width: 60px;
-                height: 30px;
-                font-size: 15px;
-                float: left;
-                text-align: center;
-                text-transform: capitalize;
-                font-family: $font-Noto;
-                &:first-of-type {
-                    border-radius: 10px 0px 0px 10px;
+        .nav {
+            width: 170px;
+            padding: 10px 10px;
+            display: inline-block;
+            background-color: rgb(182, 172, 172);
+            text-decoration: none;
+            margin-left: calc(50% - 105px);
+            margin-top: 210px;
+            border-radius: 4px;
+            font-family: $font-Noto;
+            a {
+                color: black;
+                border-radius: 4px;
+                &:hover {
+                    background-color: rgb(50, 50, 139);
                 }
-                &:last-of-type {
-                    border-radius: 0px 10px 10px 0px;
+                @media (max-width: $md) {
+                   margin-top: 0px;
                 }
             }
         }
@@ -97,4 +98,4 @@
 }
 
 
-//! Greiciausiai kitoj eiluteje reikes ziuret buttonus sudet !
+//! Susimoviau su nav baru, responsive ziuret
