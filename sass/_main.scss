@@ -1,0 +1,100 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    .background {
+        width: 100%;
+        height: 60%;
+        position: fixed;
+        background: url(../img/background/wedding-photographer.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        @media (max-width: $md) {
+            width: 100%;
+            height: 40%;
+            
+        }
+        @media (max-width: $sm) {
+            width: 100%;
+            height: 20%;
+        }
+        .box__introduce {
+            width: 250px;
+            height: 200px;
+            margin-left: calc(50% - 125px);
+            margin-top: 150px;
+            border: 1px solid white;
+            // position: relative;
+            @media (max-width: $md) {
+                width: 180px;
+                height: 130px;
+                margin-left: calc(50% - 90px);
+                margin-top: 90px;
+            }
+            @media (max-width: $sm) {
+                width: 110px;
+                height: 60px;
+                margin-left: calc(50% - 55px);
+                margin-bottom: 100px;
+                margin-top: 50px;
+            }
+            h1 {
+                font-size: 40px;
+                color: white;
+                text-transform: uppercase;
+                text-align: center;
+                margin-top: 50px;
+                padding: 10px;
+                font-family: $font-Noto;
+                @media (max-width: $md) {
+                    margin-top: 25px;
+                    font-size: 30px;
+                }
+                @media (max-width: $sm) {
+                    margin-top: 3px;
+                    font-size: 14px;
+                }
+            }
+            p {
+                text-align: center;
+                color: white;
+                text-transform: uppercase;
+                font-family: $font-Noto;
+                @media (max-width: $sm) {
+                    font-size: 10px;
+                }
+            }
+        }
+        .button__wrap {
+            width: 180px;
+            height: 70px;
+            margin-left: calc(50% - 90px);
+            // margin-top: 160px;
+            // position: relative;
+            button {
+                width: 60px;
+                height: 30px;
+                font-size: 15px;
+                float: left;
+                text-align: center;
+                text-transform: capitalize;
+                font-family: $font-Noto;
+                &:first-of-type {
+                    border-radius: 10px 0px 0px 10px;
+                }
+                &:last-of-type {
+                    border-radius: 0px 10px 10px 0px;
+                }
+            }
+        }
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+    }
+}
+
+
+//! Greiciausiai kitoj eiluteje reikes ziuret buttonus sudet !
