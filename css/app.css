@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -97,7 +98,7 @@ html {
 .wrapper .background {
   width: 100%;
   height: 60%;
-  position: fixed;
+  display: flex;
   background: url(../img/background/wedding-photographer.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -106,17 +107,15 @@ html {
 
 @media (max-width: 720px) {
   .wrapper .background {
-    width: 90%;
+    width: 100%;
     height: 40%;
-    margin-left: 5%;
   }
 }
 
 @media (max-width: 400px) {
   .wrapper .background {
-    width: 80%;
+    width: 100%;
     height: 20%;
-    margin-left: 10%;
   }
 }
 
@@ -131,7 +130,7 @@ html {
 @media (max-width: 720px) {
   .wrapper .background .box__introduce {
     width: 180px;
-    height: 130px;
+    height: 120px;
     margin-left: calc(50% - 90px);
     margin-top: 90px;
   }
@@ -153,20 +152,21 @@ html {
   text-transform: uppercase;
   text-align: center;
   margin-top: 50px;
+  letter-spacing: 5px;
   padding: 10px;
   font-family: "Noto Sans JP", sans-serif;
 }
 
 @media (max-width: 720px) {
   .wrapper .background .box__introduce h1 {
-    margin-top: 25px;
+    margin-top: 20px;
     font-size: 30px;
   }
 }
 
 @media (max-width: 400px) {
   .wrapper .background .box__introduce h1 {
-    margin-top: 3px;
+    margin-top: 5px;
     font-size: 14px;
   }
 }
@@ -178,41 +178,163 @@ html {
   font-family: "Noto Sans JP", sans-serif;
 }
 
+@media (max-width: 720px) {
+  .wrapper .background .box__introduce p {
+    display: none;
+  }
+}
+
 @media (max-width: 400px) {
   .wrapper .background .box__introduce p {
-    font-size: 10px;
+    display: none;
   }
 }
 
 .wrapper .background .nav {
-  width: 170px;
-  padding: 10px 10px;
-  display: inline-block;
+  width: auto;
+  position: absolute;
+  left: 42%;
+  top: 58%;
   background-color: #b6acac;
   text-decoration: none;
-  margin-left: calc(50% - 105px);
-  margin-top: 210px;
   border-radius: 4px;
   font-family: "Noto Sans JP", sans-serif;
 }
 
+@media (max-width: 720px) {
+  .wrapper .background .nav {
+    left: 33%;
+    top: 38%;
+  }
+}
+
+@media (max-width: 400px) {
+  .wrapper .background .nav {
+    top: 20%;
+    left: 15%;
+    margin-left: 5%;
+  }
+}
+
 .wrapper .background .nav a {
   color: black;
-  border-radius: 4px;
+  border-radius: 5px;
+  padding: 15px;
+  display: block;
+  float: left;
 }
 
 .wrapper .background .nav a:hover {
   background-color: #32328b;
 }
 
+.wrapper .main {
+  width: 100%;
+  padding-top: 50px;
+}
+
+.wrapper .main .photo {
+  background: url(../img/background/Altja_jõgi_Lahemaal.jpg);
+}
+
+.wrapper .main .photo1 {
+  background: url(../img/background/andy_pariat_shillong_nature_photography_01.jpg);
+}
+
+.wrapper .main .photo2 {
+  background: url(../img/background/David-Koester-Start-In-Die-Landschaftsfotografie-VII.jpg);
+}
+
+.wrapper .main .photo3 {
+  background: url(../img/background/wedding-photographerbck.jpg);
+}
+
+.wrapper .main .photo4 {
+  background: url(../img/background/nature-1.jpg);
+}
+
+.wrapper .main .fix {
+  width: 85%;
+  height: 500px;
+  margin-left: 8%;
+  margin-bottom: 3%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media (max-width: 720px) {
-  .wrapper .background .nav a {
-    margin-top: 0px;
+  .wrapper .main .fix {
+    height: 300px;
   }
 }
 
-.wrapper .container {
+@media (max-width: 400px) {
+  .wrapper .main .fix {
+    height: 200px;
+  }
+}
+
+.wrapper .footer {
+  display: block;
   width: 100%;
-  height: 100%;
-  background-color: black;
+  height: 700px;
+}
+
+.wrapper .footer h2 {
+  text-align: center;
+  font-size: 35px;
+  text-transform: capitalize;
+  padding: 30px;
+}
+
+.wrapper .footer p {
+  font-size: 23px;
+  max-width: 1000px;
+  width: 100%;
+  margin-left: calc(50% - 500px);
+  align-items: center;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.wrapper .footer form {
+  display: block;
+  width: 1000px;
+  max-width: 1000px;
+  height: 600px;
+  margin-top: 20px;
+  padding-top: 20px;
+  margin-left: calc(50% - 500px);
+}
+
+.wrapper .footer form label {
+  font-size: 23px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.wrapper .footer form .name,
+.wrapper .footer form .email,
+.wrapper .footer form .message {
+  display: block;
+  width: 1000px;
+  height: 50px;
+  margin-left: calc(50% - 500px);
+  background-color: white;
+  border: 1px solid gray;
+}
+
+.wrapper .footer form button {
+  width: 1000px;
+  height: 50px;
+  margin-left: calc(50% - 500px);
+  margin-top: 10px;
+  background-color: gray;
+  color: white;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.wrapper .footer form button:hover {
+  background-color: #d8c4c4;
+  color: black;
 }
